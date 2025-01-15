@@ -1,0 +1,9 @@
+Jan 15 10:01:23 server kernel: CRITICAL: Disk failure detected on /dev/sda
+Jan 15 10:02:45 server app[1234]: CRITICAL: Out of memory error in app_service
+Jan 15 10:03:56 server kernel: CRITICAL: Network interface eth0 is down
+Jan 15 10:04:12 server sshd[5678]: CRITICAL: SSH key authentication failed
+Jan 15 10:05:33 server kernel: CRITICAL: Kernel panic detected
+Jan 15 10:06:47 server app[9102]: CRITICAL: Database connection lost
+Jan 15 10:07:59 server sshd[1240]: CRITICAL: Too many failed login attempts
+Jan 15 10:08:16 server app[1123]: CRITICAL: Application timeout occurred
+Jan 15 10:09:32 server kernel: CRITICAL: High CPU temperature warning
