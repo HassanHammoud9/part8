@@ -1,0 +1,9 @@
+Jan 15 10:01:23 server sshd[1234]: FAILED login for user root from 192.168.1.1
+Jan 15 10:02:45 server sshd[1235]: FAILED login for user admin from 10.0.0.2
+Jan 15 10:03:56 server sshd[1236]: FAILED login for user guest from 192.168.1.1
+Jan 15 10:04:12 server sshd[1237]: FAILED login for user root from 10.0.0.3
+Jan 15 10:05:33 server sshd[1238]: FAILED login for user admin from 192.168.1.1
+Jan 15 10:06:47 server sshd[1239]: FAILED login for user guest from 10.0.0.4
+Jan 15 10:07:59 server sshd[1240]: FAILED login for user root from 10.0.0.3
+Jan 15 10:08:16 server sshd[1241]: FAILED login for user admin from 192.168.1.1
+Jan 15 10:09:32 server sshd[1242]: FAILED login for user root from 10.0.0.5
