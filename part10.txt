@@ -1,0 +1,1 @@
+grep "CRITICAL" syslog.txt | wc -l | awk -v date="$(date '+%Y-%m-%d %H:%M:%S')" '{print date ": " $0}' >> critical_report.txt
