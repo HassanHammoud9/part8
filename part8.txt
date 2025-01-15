@@ -1,0 +1,31 @@
+while true; do
+    # Get the PID of the process
+    PID=$(pgrep backup_service)
+    
+    if [ -z "$PID" ]; then
+        echo "Process backup_service is not running."
+        break
+    fi
+
+    # Check CPU usage of the process
+    CPU_USAGE=$(ps -p $PID -o %cpu --no-headers | awk '{print int($1)}')
+
+    if [ "$CPU_USAGE" -gt 90 ]; then
+        echo "High CPU usage detected: $CPU_USAGE%. Monitoring for 5 minutes..."
+        
+        # Wait for 5 minutes and recheck
+        sleep 300
+        CPU_USAGE_AGAIN=$(ps -p $PID -o %cpu --no-headers | awk '{print int($1)}')
+
+        if [ "$CPU_USAGE_AGAIN" -gt 90 ]; then
+            echo "CPU usage still exceeds 90%. Terminating process..."
+            kill -SIGTERM $PID
+            break
+        else
+            echo "CPU usage has dropped below 90%. Process continues."
+        fi
+    fi
+
+    # Check every minute
+    sleep 60
+done
